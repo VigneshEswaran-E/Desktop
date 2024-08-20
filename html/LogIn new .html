@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>LogIn </title>
+<style>
+ form{text-align:center;}
+label{
+font-size:20px;
+font-weight: bold;}
+h2{color: red;}
+</style>
+</head>
+<body>
+<form>
+<label><h2>LogIn form</h2></label>
+<label>UserName :</label><input type="text" id="UserName" placeholder="Enter the Name" maxlength="20"><br><br>
+<label>Password :</label><input type="password" placeholder="Enter the Password" id="Password" maxlength="15"><br><br>
+<label>Gender :</label>
+                     <input type="radio" name="Gender" id="Male" value="Male">Male 
+                     <input type="radio" name="Gender" id="Female" value="Female">Female<br>
+<label>Skills :</label>	
+                     <input type="checkbox" id="C#" value="C#">C#
+                     <input type="checkbox" id="SQL" value="SQL">SQL
+                     <input type="checkbox" id="HTML" value="HTML">HTML
+                     <input type="checkbox" id="Java" value="Java">Java<br><br>
+<label>Address :</label>
+                      <textarea id="address" placeholder="Enter the Address" maxlength="60"></textarea><br>
+<label>State :</label><select><option value="0"><label>--Select State</label></option>
+                              <option value="1"><label>TamilNadu</label></option>
+                              <option value="2"><label>Kerala</label></option> 
+                      </select> <br><br>
+<input type="submit" onclick="fun()" value="submit">  
+
+                     
+</form>
+<script>
+function fun()
+{
+debugger;
+var con =document.getElementById("address");
+var con2=con.value;
+alert(con2);
+}
+</script>
+</body>
+</html>

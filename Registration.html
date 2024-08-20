@@ -1,0 +1,254 @@
+<html>
+<head>
+    <title>WELCOME</title>
+    <script>
+
+        signup();
+        function signup() {
+            var Name = document.getElementById("Name").value;
+            var MobileNumber = document.getElementById("MobileNumber").value;
+            var Email = document.getElementById("Email").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            //validation
+            if (Name == null ) {
+                alert("Enter the name");
+                return;
+            }
+            if (MobileNumber == null || MobileNumber.length == 0) {
+                alert("Enter the MobileNumber");
+                return;
+            }
+            if (Email == null || Email.length == 0) {
+                alert("Enter your mail id");
+                return;
+            }
+            if (username == null || username.length==0) {
+                alert("Enter your username");
+                return;
+            }
+            if (password == null || password.length == 0) {
+                alert("Enter your password");
+                return;
+            }
+            else {
+                alert("your profile register sucessfully");
+                return;
+            }
+            var object = {};
+            object.Name = Name;
+            object.MobileNumber = MobileNumber;
+            object.Email = Email;
+            object.username = username;
+            object.password = password;
+
+        }
+
+        function signin() {
+            let username = document.getElementById("user name").value;
+            let password = document.getElementById("password signin").value;
+
+            if (username == null || username.length == 0) {
+                alert("please enter user name");
+                return;
+            }
+            if (password == null || password.length == 0) {
+                alert("please enter password");
+                return;
+            }
+            else {
+                alert(" signin sucessfull");
+                return;
+            }
+            var signin = {};
+            signin.username = username;
+            signin.password = password;
+        }
+
+        function changepassword() {
+            let username = document.getElementById("usernameid").value;
+            let password = document.getElementById("password change").value;
+            let newpassword = document.getElementById("new password").value
+
+            if (username == null || username.length == 0) {
+                alert("please enter user name");
+                return;
+            }
+            if (password == null || password.length == 0) {
+                alert("please enter password");
+                return;
+            }
+            if (newpassword == null || newpassword.length == 0) {
+                alert("please enter new password");
+                return;
+            }
+            else {
+                alert("password changed sucessfully");
+                return;
+
+            }
+            var changepassword = {};
+            changepassword.username = username;
+            changepassword.password = password;
+            changepassword.newpassword = newpassword;
+
+        }
+        function removeuser(){
+            let username = document.getElementById("usernameremove").value;
+            let password = document.getElementById("passwordremove").value;
+
+            if (username == null || username.length == 0) {
+                alert("please enter user name");
+                return;
+            }
+            if (password == null || password.length == 0) {
+                alert("please enter password");
+                return;
+            } else {
+                alert("user removed sucessfully");
+                return;
+            }
+            var removeuser = {};
+            removeuser.username = username;
+            removeuser.password = password;
+
+          
+                
+
+        }
+        function HideandShow() {
+            if (document.getElementById("signin").checked) {
+                alert("signinpage opened");
+
+                var signindvele = document.getElementById("front");
+                signindvele.style.display = "block";
+                var logdivele = document.getElementById("registration");
+                logdivele.style.display = "none";
+                var changedivele = document.getElementById("changepassword");
+                changedivele.style.display = "none";
+                var removedivele = document.getElementById(" removeuser");
+                removedivele.style.display = "none";
+
+            }
+            else if (document.getElementById("Registrationradio").checked) {
+                alert("open registration");
+                var signindvele = document.getElementById("front");
+                signindvele.style.display = "none";
+                var logdivele = document.getElementById("registration");
+                logdivele.style.display = "block";
+                var changedivele = document.getElementById("changepassword");
+                changedivele.style.display = "none";
+                var removedivele = document.getElementById(" removeuser");
+                removedivele.style.display = "none";
+
+            }
+            else if (document.getElementById("changepasswordradio").checked) {
+                alert(" changepassword option opened");
+                var signindvele = document.getElementById("front");
+                signindvele.style.display = "none";
+                var logdivele = document.getElementById("registration");
+                logdivele.style.display = "none";
+                var changedivele = document.getElementById("changepassword");
+                changedivele.style.display = "block";
+                var removedivele = document.getElementById(" removeuser");
+                removedivele.style.display = "none";
+            }
+            else (document.getElementById("Removeuserradio").checked) s{
+                alert("user remove page is opened");
+                var signindvele = document.getElementById("front");
+                signindvele.style.display = "none";
+                var logdivele = document.getElementById("registration");
+                logdivele.style.display = "none";
+                var changedivele = document.getElementById("changepassword");
+                changedivele.style.display = "none";
+                var removedivele = document.getElementById(" removeuser");
+                removedivele.style.display = "block";
+            }
+        }
+        
+
+
+    </script>
+
+</head>
+<center>
+    <body>
+        
+        <div id=" option">
+            <h1><b>WELCOME</b></h1><hr />
+            <h2><b>CHOSE BELOW ANY OPTION</b></h2>
+            <input type="radio" id="signin" name="options" value="1" onchange="HideandShow()" />1.signin
+            <input type="radio" id="Registration " name="options" value="2" onchange="HideandShow()" />2.Registration
+            <input type="radio" id="changepassword " name="options" value="3" onchange="HideandShow()" />3.Change password
+            <input type="radio" id="Removeuser " name="options" value="4" onchange="HideandShow()" />4.Remove user
+
+
+            </select><br><br><hr />
+
+        </div>
+    </body>
+
+    <body>
+        <style>
+            body {
+                background-color: lightsteelblue;
+            }
+        </style>
+
+       
+        <br>
+        <div id="front" style="display:block">
+            <h2>SIGNIN</h2>
+            <label><b>user name :</b></label>
+            <input type='text' placeholder="user name" id="user name"><br><br>
+            <label><b>password:</b></label>
+            <input type='password' placeholder="password" id="password signin" /><br /><br />
+            <input type="button" value="signin" onclick="signin()" style="background-color:lightblue"><br><br /><hr />
+
+        </div>
+        
+        <div id=" registration" style="display:none">
+            <h2>REGISTRATION</h2>
+            <lable><b>Name</b></lable>
+            <input type='text' placeholder="user" id="Name"></input><br><br>
+            <lable><b>MobileNumber</b></lable>
+            <input type='text' placeholder="12345-67890" id="MobileNumber" maxlength="10"></input><br><br>
+            <lable><b>Email</b></lable>
+            <input type='text' placeholder="yyyy@123gmail.com" id="Email"></input><br><br>
+            <lable><b>username</b></lable>
+            <input type='text' placeholder="user123" id="username"></input><br><br>
+            <lable><b>password </b></lable>
+            <input type='text' placeholder="user@123" id="password"></input>
+            <p>by click submit button you agree to our <a href="https:www.google.com" target=blank>Terms and conditions</a></p>
+
+            <input type="submit" value="Register" onclick="signup()" style=background:lightblue />
+            <p>Already having an account ?<input type="button" value="signin" style=background:lightblue /></p><hr />
+        </div>
+       
+        <div id=" changepassword" style="display:none">
+            <h2>CHANGE PASSWORD</h2>
+            <lable><b>username</b></lable>
+            <input type="text" placeholder="username" id="usernameid"></input><br /><br />
+            <label><b>password</b></label>
+            <input type="text" placeholder="password" id="password change"></input><br /><br />
+            <label><b>new password</b></label>
+            <input type="password" placeholder="new password" id="new password"></input><br /><br />
+            <input type="button" value="changepassword" onclick="changepassword()" style="background-color:lightblue"><br><br /><hr />
+        </div>
+        
+        <div id=" removeuser" style="display:none">
+            <h2>REMOVE USER</h2>
+            <lable><b>username</b></lable>
+            <input type="text" placeholder="username" id="usernameremove" /><br /><br />
+            <lable><b>password</b></lable>
+            <input type="password" placeholder="password" id="passwordremove" /><br /><br />
+
+            <input type="button" value="remove" onclick="removeuser();" style="background-color:lightblue"><br><br /><hr />
+
+        </div>
+
+
+
+    </body>
+</html>
